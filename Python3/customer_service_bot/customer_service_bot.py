@@ -167,13 +167,13 @@ def home_visit(purpose = "none"):
             home_visit("scout")
     if purpose == "new install":
         visit_date = input("Please enter a date below when you are available for a technician to come to your home and install your new service.")
-        print("Wonderful! A technical will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        print("Wonderful! A technician will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
     if purpose == "support":
         visit_date = input("Please enter a date below when you are available for a technician to come to your home to troubleshoot and repair your service.")
-        print("Wonderful! A technical will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        print("Wonderful! A technician will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
     if purpose == "scout":
         visit_date = input("Please enter a date below when you are available for a technician to come to your home and scout out the area for new service.")
-        print("Wonderful! A technical will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        print("Wonderful! A technician will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
 
 
 # In[11]:
