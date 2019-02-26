@@ -155,7 +155,7 @@ def sign_up():
 # In[10]:
 
 
-def home_visit(purpose = "none"):
+def home_visit(purpose="none"):
     if purpose == "none":
         print("What is the reason for the home visit?")
         response = input("[1] New service installation. \n[2] Exisitng service repair. \n[3] Location scouting for unserviced region.")
@@ -168,12 +168,15 @@ def home_visit(purpose = "none"):
     if purpose == "new install":
         visit_date = input("Please enter a date below when you are available for a technician to come to your home and install your new service.")
         print("Wonderful! A technician will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        return visit_date
     if purpose == "support":
         visit_date = input("Please enter a date below when you are available for a technician to come to your home to troubleshoot and repair your service.")
         print("Wonderful! A technician will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        return visit_date
     if purpose == "scout":
         visit_date = input("Please enter a date below when you are available for a technician to come to your home and scout out the area for new service.")
         print("Wonderful! A technician will come visit you on " + visit_date + ". Please be available between the hours of 1:00 am and 11:00 pm.")
+        return visit_date
 
 
 # In[11]:
