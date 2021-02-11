@@ -1,2 +1,2 @@
 # Codecademy
-Collection of my work during Codecademy courses.
+Collection of my work while going through Codecademy courses.
