@@ -35,10 +35,19 @@ print(coder(message, offset))
 # Decode first message to figure out how to decode the second message
 first_message = "jxu evviuj veh jxu iusedt cuiiqwu yi vekhjuud."
 offset = 10
+
 print(decoder(first_message, offset))
 
 # Decode second message using the clue from the deciphered first message
 second_message = "bqdradyuzs ygxfubxq omqemd oubtqde fa oapq kagd yqeemsqe ue qhqz yadq eqogdq!"
 offset = 14
+
 print(decoder(second_message, offset))
 
+# Decode message by brute forcing the offset value
+brute_message = "vhfinmxkl atox kxgwxkxw tee hy maxlx hew vbiaxkl tl hulhexmx. px'ee atox mh kxteer lmxi ni hnk ztfx by px ptgm mh dxxi hnk fxlltzxl ltyx."
+
+for i in range(len(alphabet)):
+    print("Offset of " + str(i) + ":\n" + decoder(brute_message, i) + "\n")
+
+# Decode message using the Vigenere Cipher with the keyword of friends
