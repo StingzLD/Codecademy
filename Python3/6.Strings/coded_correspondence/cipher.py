@@ -51,3 +51,46 @@ for i in range(len(alphabet)):
     print("Offset of " + str(i) + ":\n" + decoder(brute_message, i) + "\n")
 
 # Decode message using the Vigenere Cipher with the keyword of friends
+vigenere_message = "dfc aruw fsti gr vjtwhr wznj? vmph otis! cbx swv jipreneo uhllj kpi rahjib eg fjdkwkedhmp!"
+keyword = "friends"
+
+def vigenere_decoder(message, keyword):
+    decoded_message = ""
+    keyword_index = 0
+    keyword_letter = ""
+    for char in message:
+        if alphabet.find(char) == -1:
+            decoded_message += char
+        else:
+            keyword_letter = keyword[keyword_index]
+            #print(keyword_index, keyword_letter)
+            new_char = alphabet[(alphabet.find(char) - alphabet.find(keyword_letter)) % len(alphabet)]
+            decoded_message += new_char
+            #print(decoded_message)
+            keyword_index = (keyword_index + 1) % len(keyword)
+    return decoded_message
+
+print(vigenere_decoder(vigenere_message, keyword))
+
+# Encode and decode a message using the Vigenere Cipher
+vigenere_message_to_code = "let's make sure that we can code and decode properly, shall we?"
+keyword = "shibby"
+
+def vigenere_coder(message, keyword):
+    coded_message = ""
+    keyword_index = 0
+    keyword_letter = ""
+    for char in message:
+        if alphabet.find(char) == -1:
+            coded_message += char
+        else:
+            keyword_letter = keyword[keyword_index]
+            #print(keyword_index, keyword_letter)
+            new_char = alphabet[(alphabet.find(char) + alphabet.find(keyword_letter)) % len(alphabet)]
+            coded_message += new_char
+            #print(coded_message)
+            keyword_index = (keyword_index + 1) % len(keyword)
+    return coded_message
+
+print(vigenere_coder(vigenere_message_to_code, keyword))
+print(vigenere_decoder(vigenere_coder(vigenere_message_to_code, keyword), keyword))
