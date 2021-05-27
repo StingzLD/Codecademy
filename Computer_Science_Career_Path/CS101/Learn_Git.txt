@@ -1,0 +1,1 @@
+All Learn Git code resides in the Codecademy/Learn_Git folder.

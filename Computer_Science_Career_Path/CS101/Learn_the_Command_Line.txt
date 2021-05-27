@@ -1,0 +1,1 @@
+All Learn the Command Line code resides in the Codecademy/Learn_the_Command_Line folder.
